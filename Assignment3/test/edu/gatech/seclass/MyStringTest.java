@@ -38,17 +38,17 @@ public class MyStringTest {
     }
 
     @Test
-    // Description: Second test for count number with numbers and special characters
+    // Description: Second test for count number with special characters
     public void testCountAlphabeticWords2() {
-        mystring.setString("i#love 2 pr00gram.");
-        assertEquals(4, mystring.countAlphabeticWords());
+        mystring.setString("test#with sp@cial ch@rac^ters");
+        assertEquals(7, mystring.countAlphabeticWords());
     }
 
     @Test
-    // Description: Third test for counter number with special character and capitalization
+    // Description: Third test for counter number with capitalization
     public void testCountAlphabeticWords3() {
-        mystring.setString("I hadan INTERVIEW to-day !");
-        assertEquals(5, mystring.countAlphabeticWords());
+        mystring.setString("I HA Dan INTERVIEW to day");
+        assertEquals(6, mystring.countAlphabeticWords());
     }
 
     @Test
@@ -66,37 +66,38 @@ public class MyStringTest {
     }
 
     @Test
-    // Description: <Add test description here>
+    // Description: Second add number test with no flip and adding to a negative number
     public void testAddNumber2() {
-        mystring.setString("-12345");
-        assertEquals("-12355", mystring.addNumber(10, false));
+        mystring.setString("-11111");
+        assertEquals("-11211", mystring.addNumber(100, false));
     }
 
     @Test
-    // Description: <Add test description here>
+    // Description: Third add number test with flip with special character
     public void testAddNumber3() {
-        mystring.setString("12345");
-        assertEquals("54321", mystring.addNumber(0, true));
+        mystring.setString("12#45");
+        assertEquals("22#55", mystring.addNumber(1, true));
     }
 
     @Test
-    // Description: <Add test description here>
+    // Description: Fourth add number test with flip with spaced numbers
     public void testAddNumber4() {
-        mystring.setString("hello 90, bye 2");
-        assertEquals("hello 17, bye 10", mystring.addNumber(8, true));
+        mystring.setString("90, 2, 15");
+        assertEquals("17, 10, 59", mystring.addNumber(8, true));
     }
 
     @Test
-    // Description: <Add test description here>
+    // Description: Fifth add number test with zeros
     public void testAddNumber5() {
-        mystring.setString("hello 2022, bye 2000");
-        assertEquals("hello 2302, bye 102", mystring.addNumber(100, true));
+        mystring.setString("Zer0 2022, 3000");
+        assertEquals("Zer100 2302, 103", mystring.addNumber(100, true));
     }
 
     @Test
-    // Description: <Add test description here>
+    // Description: Sixth add number test with words and numbers mixed
     public void testAddNumber6() {
-        fail("Not yet implemented");
+        mystring.setString("Hell0 W0r1d");
+        assertEquals("Hell1 W1r2d", mystring.addNumber(1, true));
     }
 
     @Test
