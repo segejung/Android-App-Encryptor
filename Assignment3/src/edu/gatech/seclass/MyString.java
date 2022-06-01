@@ -96,24 +96,38 @@ public class MyString implements MyStringInterface {
         if(n < 0 && this.str != null) {
             throw new IllegalArgumentException();
         }
-        HashMap<String, Integer> charCount = new HashMap<>();
-        for(int i = 0; i < this.str.length(); i++) {
-            String c = String.valueOf(this.str.charAt(i)).toLowerCase();
 
-            // Unique only
-            if(charCount.containsKey(c)) {
-                // Seen before
-                charCount.put(c, charCount.get(c) + 1);
+        String newString = "";
+        //if flip is true
+        if (flip) {
+            for (int i = 0; i < this.str.length(); i++) {
+                char temp = this.str.charAt(i);
+                String temp_1="";
+                if (Character.isDigit(temp)) {
+                    temp_1 = Integer.toString(((Character.getNumericValue(temp)) + n)%10);
+                }
+                else{
+                    temp_1 = Character.toString(temp);
+                }
+                newString +=  temp_1;
             }
-            else {
-                // First occurrence
-                charCount.put(c, 1);
+        }else {
+            for (int i = 0; i < this.str.length(); i++) {
+                char temp = this.str.charAt(i);
+                String temp_1="";
+                if (Character.isDigit(temp)) {
+                    temp_1 = Integer.toString(((Character.getNumericValue(temp)) - n + 10)%10);
+                }
+                else{
+                    temp_1 = Character.toString(temp);
+                }
+                newString +=  temp_1;
             }
         }
-
-
-
+        return newString;
     }
+
+
 
     @Override
     public void convertDigitsToNamesInSubstring(int firstPosition, int finalPosition) {
