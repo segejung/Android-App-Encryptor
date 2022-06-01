@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.lang.String;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MyString implements MyStringInterface {
 
@@ -97,38 +99,61 @@ public class MyString implements MyStringInterface {
             throw new IllegalArgumentException();
         }
 
-        String newString = "";
-        //if flip is true
         if (flip) {
-            for (int i = 0; i < this.str.length(); i++) {
-                char temp = this.str.charAt(i);
-                String temp_1="";
-                if (Character.isDigit(temp)) {
-                    temp_1 = Integer.toString(((Character.getNumericValue(temp)) + n)%10);
-                }
-                else{
-                    temp_1 = Character.toString(temp);
-                }
-                newString +=  temp_1;
+            StringBuilder sb = new StringBuilder();
+            Matcher m = Pattern.compile("\\d+").matcher(str);
+            int pos = 0;
+            while (m.find()) {
+                int start = m.start();
+                String reversed = new StringBuilder(m.group()).reverse().toString();
+                int number = Integer.parseInt(reversed); //this is to convert string to int
+                int newnumber = number + n; //this is to add the int with n
+                sb.append(str.substring(pos, start)).append(newnumber); //append with the rest of the string
+                pos = m.end();
             }
-        }else {
-            for (int i = 0; i < this.str.length(); i++) {
-                char temp = this.str.charAt(i);
-                String temp_1="";
-                if (Character.isDigit(temp)) {
-                    temp_1 = Integer.toString(((Character.getNumericValue(temp)) - n + 10)%10);
-                }
-                else{
-                    temp_1 = Character.toString(temp);
-                }
-                newString +=  temp_1;
-            }
+            if (sb.length() == 0) // If no number was found
+                return str;
+            else
+                return sb.append(str.substring(pos)).toString();
         }
-        return newString;
+        else {
+            StringBuilder sb = new StringBuilder();
+            Matcher m = Pattern.compile("\\d+").matcher(str);
+            int pos = 0;
+            while (m.find()) {
+                int start = m.start();
+                String reversed = new StringBuilder(m.group()).toString();
+                int number = Integer.parseInt(reversed);
+                int newnumber = number + n;
+                sb.append(str.substring(pos, start)).append(newnumber);
+                pos = m.end();
+            }
+            if (sb.length() == 0) // If no number was found
+                return str;
+            else
+                return sb.append(str.substring(pos)).toString();
+        }
     }
 
+    /**
+     * Replace the individual digits in the current string, between firstPosition and finalPosition
+     * (included), with the corresponding name (i.e., string representation) of those digits.
+     * The first character in the string is considered to be in Position 1.
+     *
+     * Examples:
+     * - String "I'd b3tt3r put s0me d161ts in this 5tr1n6, right?", with firstPosition=17 and finalPosition=23 would be
+     *   converted to "I'd b3tt3r put sZerome dOneSix1ts in this 5tr1n6, right?"
+     * - String "abc416d", with firstPosition=2 and finalPosition=7 would be converted to "abcFourOneSixd"
+     *
+     * @param firstPosition Position of the first character to consider
+     * @param finalPosition   Position of the last character to consider
 
-
+     * @throws NullPointerException        If the current string is null
+     * @throws IllegalArgumentException    If "firstPosition" < 1 or "firstPosition" > "finalPosition" (and the string
+     *                                     is not null)
+     * @throws MyIndexOutOfBoundsException If "finalPosition" is out of bounds (i.e., greater than the length of the
+     *                                     string), 1 <= "firstPosition" <= "finalPosition", and the string is not null
+     */
     @Override
     public void convertDigitsToNamesInSubstring(int firstPosition, int finalPosition) {
 
