@@ -68,25 +68,29 @@ public class MyStringTest {
     @Test
     // Description: <Add test description here>
     public void testAddNumber2() {
-        fail("Not yet implemented");
+        mystring.setString("-12345");
+        assertEquals("-12355", mystring.addNumber(10, false));
     }
 
     @Test
     // Description: <Add test description here>
     public void testAddNumber3() {
-        fail("Not yet implemented");
+        mystring.setString("12345");
+        assertEquals("54321", mystring.addNumber(0, true));
     }
 
     @Test
     // Description: <Add test description here>
     public void testAddNumber4() {
-        fail("Not yet implemented");
+        mystring.setString("hello 90, bye 2");
+        assertEquals("hello 17, bye 10", mystring.addNumber(8, true));
     }
 
     @Test
     // Description: <Add test description here>
     public void testAddNumber5() {
-        fail("Not yet implemented");
+        mystring.setString("hello 2022, bye 2000");
+        assertEquals("hello 2302, bye 102", mystring.addNumber(100, true));
     }
 
     @Test
