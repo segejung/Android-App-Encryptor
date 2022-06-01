@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  * Junit test class created for use in Georgia Tech CS6300.
@@ -37,21 +38,24 @@ public class MyStringTest {
     }
 
     @Test
-    // Description: <Add test description here>
+    // Description: Second test for count number with numbers and special characters
     public void testCountAlphabeticWords2() {
-        fail("Not yet implemented");
+        mystring.setString("i#love 2 pr00gram.");
+        assertEquals(4, mystring.countAlphabeticWords());
     }
 
     @Test
-    // Description: <Add test description here>
+    // Description: Third test for counter number with special character and capitalization
     public void testCountAlphabeticWords3() {
-        fail("Not yet implemented");
+        mystring.setString("I hadan INTERVIEW to-day !");
+        assertEquals(5, mystring.countAlphabeticWords());
     }
 
     @Test
-    // Description: <Add test description here>
+    // Description: Fourth test for counter number with empty string
     public void testCountAlphabeticWords4() {
-        fail("Not yet implemented");
+        mystring.setString("");
+        assertEquals(0, mystring.countAlphabeticWords());
     }
 
     @Test
