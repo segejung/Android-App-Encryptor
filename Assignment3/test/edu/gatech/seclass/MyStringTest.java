@@ -111,9 +111,10 @@ public class MyStringTest {
     @Test
     // Description: <Add test description here>
     public void testConvertDigitsToNamesInSubstring2() {
-        fail("Not yet implemented");
+        mystring.setString("I'd b3tt3r put s0me d161ts in this 5tr1n6, right?");
+        mystring.convertDigitsToNamesInSubstring(1, 49);
+        assertEquals("I'd bThreettThreer put sZerome dOneSixOnets in this FivetrOnenSix, right?", mystring.getString());
     }
-
     @Test
     // Description: <Add test description here>
     public void testConvertDigitsToNamesInSubstring3() {

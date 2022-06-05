@@ -1,14 +1,11 @@
 package edu.gatech.seclass;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.lang.String;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MyString implements MyStringInterface {
-
     private String str = null;
 
     /**
@@ -147,6 +144,7 @@ public class MyString implements MyStringInterface {
      *
      * @param firstPosition Position of the first character to consider
      * @param finalPosition Position of the last character to consider
+     * @return
      * @throws NullPointerException        If the current string is null
      * @throws IllegalArgumentException    If "firstPosition" < 1 or "firstPosition" > "finalPosition" (and the string
      *                                     is not null)
@@ -154,7 +152,9 @@ public class MyString implements MyStringInterface {
      *                                     string), 1 <= "firstPosition" <= "finalPosition", and the string is not null
      */
     @Override
-    public void convertDigitsToNamesInSubstring(int firstPosition, int finalPosition) {
+    public String convertDigitsToNamesInSubstring(int firstPosition, int finalPosition) {
+
+
         //throw nullpointer
         if (this.str == null) {
             throw new NullPointerException();
@@ -163,40 +163,37 @@ public class MyString implements MyStringInterface {
         if (firstPosition < 1 || firstPosition > finalPosition && this.str != null) {
             throw new IllegalArgumentException();
         }
-        //myindex exception
+        //my index exception
         if (firstPosition <= finalPosition && this.str == null || 1 <= firstPosition && this.str == null) {
             throw new MyIndexOutOfBoundsException();
         }
 
-        String newString = "";
-        String[] single_digits = new String[]{"zero","one","two","three","four","five", "six","seven","eight","nine"};
-        char[] forString = new char[this.str.length()];
-        for (int i = 0; i < this.str.length(); i++) {
-            char temp = this.str.charAt(i);
-            String temp_1 = "";
-            if (i < firstPosition || i > finalPosition) {
-                forString[i] = temp;
-            }
-            int j = firstPosition;
-            int k = finalPosition;
+        //first thing to do is to look at a range set by first position and final position
+        char[] ch = str.toCharArray();
 
-            while (j <= k) if (Character.isDigit(temp) || temp == ' ') {
-                forString[j] = temp;
-            } else {
-                char savePoint = this.str.charAt(k);
-                forString[k] = temp;
-                forString[j] = savePoint;
-                j++;
-                k--;
+        for (int i = firstPosition -1; i < finalPosition; i ++) {
+
+            if(Character.isDigit(ch[i])) {
+                for (int j = finalPosition - 1; j > i ; j--) {
+                    if (!Character.isLetter(ch[j])) {
+                        finalPosition--;
+                        continue;
+                    }
+                    //swapping
+                    str = str.replace("0", "Zero").replace("1", "One").replace("2", "Two").replace("3", "Three").replace("4", "Four").replace("5", "Five").replace("6", "Six").replace("7", "Seven").replace("8", "Eight").replace("9", "Nine");
+                    char temp = ch[i];
+                    ch[i] = ch[j];
+                    ch[j] = temp;
+//I'd b3tt3r put s0me d161ts in this 5tr1n6, right?
+//I'd b3tt3r put sdme 0161ts in this 5tr1n6, right
+//I'd b3tt3r put s0de m161ts in this 5tr1n6, right?
+
+                    finalPosition--;
+                    break;
+                }
             }
-            if (Character.isDigit(temp)) {
-                temp_1 = Integer.toString((Character.getNumericValue(Integer.parseInt(single_digits[temp%10]))));
-            } else {
-                temp_1 = Character.toString(temp);
-            }
-            newString += temp_1;
-            this.str = new String(forString);
         }
-
+        return str;
     }
 }
+
