@@ -1,6 +1,5 @@
 package edu.gatech.seclass;
 
-import java.util.ArrayList;
 import java.lang.String;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -164,36 +163,17 @@ public class MyString implements MyStringInterface {
             throw new IllegalArgumentException();
         }
         //my index exception
-        if (firstPosition <= finalPosition && this.str == null || 1 <= firstPosition && this.str == null) {
+        if (firstPosition < 1 || finalPosition > this.str.length()) {
             throw new MyIndexOutOfBoundsException();
         }
-
-        //first thing to do is to look at a range set by first position and final position
-        char[] ch = str.toCharArray();
-
-        for (int i = firstPosition -1; i < finalPosition; i ++) {
-
-            if(Character.isDigit(ch[i])) {
-                for (int j = finalPosition - 1; j > i ; j--) {
-                    if (!Character.isLetter(ch[j])) {
-                        finalPosition--;
-                        continue;
-                    }
-                    //swapping
-                    str = str.replace("0", "Zero").replace("1", "One").replace("2", "Two").replace("3", "Three").replace("4", "Four").replace("5", "Five").replace("6", "Six").replace("7", "Seven").replace("8", "Eight").replace("9", "Nine");
-                    char temp = ch[i];
-                    ch[i] = ch[j];
-                    ch[j] = temp;
-//I'd b3tt3r put s0me d161ts in this 5tr1n6, right?
-//I'd b3tt3r put sdme 0161ts in this 5tr1n6, right
-//I'd b3tt3r put s0de m161ts in this 5tr1n6, right?
-
-                    finalPosition--;
-                    break;
-                }
-            }
-        }
-        return str;
+        String shortStr = str.substring(firstPosition - 1, finalPosition);
+        //replace digits to words
+        shortStr = shortStr.replaceAll("0", "Zero").replaceAll("1", "One").replaceAll("2", "Two").replaceAll("3", "Three").replaceAll("4", "Four").replaceAll("5", "Five").replaceAll("6", "Six").replaceAll("7", "Seven").replaceAll("8", "Eight").replaceAll("9", "Nine");
+        //append the string together
+        this.str = str.substring(0, firstPosition - 1) + shortStr + str.substring(finalPosition);
+        return shortStr;
     }
 }
+
+
 
