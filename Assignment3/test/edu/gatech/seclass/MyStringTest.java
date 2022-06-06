@@ -145,4 +145,10 @@ public class MyStringTest {
         mystring.convertDigitsToNamesInSubstring(10, 10);
         assertEquals("012345678Nine", mystring.getString());
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testSetString() {
+        mystring.setString("easterEgg");
+
+    }
 }
