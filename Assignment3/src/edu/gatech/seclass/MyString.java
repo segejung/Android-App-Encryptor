@@ -57,8 +57,8 @@ public class MyString implements MyStringInterface {
             return 0;
         }
         //counts words
-        String[] words = str.split("[A-Za-z]+");
-        return words.length;
+        String[] words = str.split("[^A-Za-z]+");
+        return words.length-1;
 
     }
 
