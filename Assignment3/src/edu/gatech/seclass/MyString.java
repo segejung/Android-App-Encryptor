@@ -52,7 +52,7 @@ public class MyString implements MyStringInterface {
         if (this.str == null) {
             throw new NullPointerException();
         }
-       
+
         //return 0 if current string is empty
         if (this.str == "") {
             return 0;
