@@ -93,11 +93,11 @@ public class MyStringTest {
         assertEquals("Zer100 2302, 103", mystring.addNumber(100, true));
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     // Description: Sixth add number test with words and numbers mixed
     public void testAddNumber6() {
         mystring.setString("Hell0 W0r1d");
-        assertEquals("Hell1 W1r2d", mystring.addNumber(1, true));
+        mystring.addNumber(-1, true);
     }
 
     @Test
@@ -107,12 +107,12 @@ public class MyStringTest {
         mystring.convertDigitsToNamesInSubstring(17, 23);
         assertEquals("I'd b3tt3r put sZerome dOneSix1ts in this 5tr1n6, right?", mystring.getString());
     }
-    @Test
+    @Test(expected=MyIndexOutOfBoundsException.class)
     // Description: Second convert digits example with full range
     public void testConvertDigitsToNamesInSubstring2() {
         mystring.setString("I'd b3tt3r put s0me d161ts in this 5tr1n6, right?");
-        mystring.convertDigitsToNamesInSubstring(1, 49);
-        assertEquals("I'd bThreettThreer put sZerome dOneSixOnets in this FivetrOnenSix, right?", mystring.getString());
+        mystring.convertDigitsToNamesInSubstring(1, 51);
+
     }
     @Test
     // Description: Third convert digits example testing the first position range
