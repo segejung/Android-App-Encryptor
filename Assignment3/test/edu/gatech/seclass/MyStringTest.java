@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.fail;
 
 /**
  * Junit test class created for use in Georgia Tech CS6300.
@@ -109,41 +109,32 @@ public class MyStringTest {
     }
 
     @Test
-    // Description: Second convert digits example with full range
+    // Description: <Add test description here>
     public void testConvertDigitsToNamesInSubstring2() {
-        mystring.setString("I'd b3tt3r put s0me d161ts in this 5tr1n6, right?");
-        mystring.convertDigitsToNamesInSubstring(1, 49);
-        assertEquals("I'd bThreettThreer put sZerome dOneSixOnets in this FivetrOnenSix, right?", mystring.getString());
+        fail("Not yet implemented");
     }
+
     @Test
-    // Description: Third convert digits example testing the first position range
+    // Description: <Add test description here>
     public void testConvertDigitsToNamesInSubstring3() {
-        mystring.setString("0123456789");
-        mystring.convertDigitsToNamesInSubstring(1, 1);
-        assertEquals("Zero123456789", mystring.getString());
+        fail("Not yet implemented");
     }
 
     @Test
-    // Description: Fourth convert digits example testing special characters
+    // Description: <Add test description here>
     public void testConvertDigitsToNamesInSubstring4() {
-        mystring.setString("0!23#56*89");
-        mystring.convertDigitsToNamesInSubstring(2, 6);
-        assertEquals("0!TwoThree#Five6*89", mystring.getString());
+        fail("Not yet implemented");
     }
 
     @Test
-    // Description: Fifth convert digits example with words
+    // Description: <Add test description here>
     public void testConvertDigitsToNamesInSubstring5() {
-        mystring.setString("hello there 153, your place is here");
-        mystring.convertDigitsToNamesInSubstring(2, 14);
-        assertEquals("hello there OneFive3, your place is here", mystring.getString());
+        fail("Not yet implemented");
     }
 
     @Test
-    // Description: Sixth convert digits example with final position range
+    // Description: <Add test description here>
     public void testConvertDigitsToNamesInSubstring6() {
-        mystring.setString("0123456789");
-        mystring.convertDigitsToNamesInSubstring(10, 10);
-        assertEquals("012345678Nine", mystring.getString());
+        fail("Not yet implemented");
     }
 }

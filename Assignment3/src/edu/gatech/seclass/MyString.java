@@ -143,7 +143,6 @@ public class MyString implements MyStringInterface {
      *
      * @param firstPosition Position of the first character to consider
      * @param finalPosition Position of the last character to consider
-     * @return
      * @throws NullPointerException        If the current string is null
      * @throws IllegalArgumentException    If "firstPosition" < 1 or "firstPosition" > "finalPosition" (and the string
      *                                     is not null)
@@ -151,7 +150,7 @@ public class MyString implements MyStringInterface {
      *                                     string), 1 <= "firstPosition" <= "finalPosition", and the string is not null
      */
     @Override
-    public String convertDigitsToNamesInSubstring(int firstPosition, int finalPosition) {
+    public void convertDigitsToNamesInSubstring(int firstPosition, int finalPosition) {
 
 
         //throw nullpointer
@@ -171,7 +170,7 @@ public class MyString implements MyStringInterface {
         shortStr = shortStr.replaceAll("0", "Zero").replaceAll("1", "One").replaceAll("2", "Two").replaceAll("3", "Three").replaceAll("4", "Four").replaceAll("5", "Five").replaceAll("6", "Six").replaceAll("7", "Seven").replaceAll("8", "Eight").replaceAll("9", "Nine");
         //append the string together
         this.str = str.substring(0, firstPosition - 1) + shortStr + str.substring(finalPosition);
-        return shortStr;
+
     }
 }
 
