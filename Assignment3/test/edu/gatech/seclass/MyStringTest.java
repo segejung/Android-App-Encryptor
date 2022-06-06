@@ -53,7 +53,7 @@ public class MyStringTest {
 
     @Test(expected = IllegalArgumentException.class)
     // Description: Fourth test for counter number with empty string
-    public void testCountAlphabeticWords4() {
+    public void testEasterEgg() {
         mystring.setString("easterEgg");
 
     }
