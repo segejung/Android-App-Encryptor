@@ -51,11 +51,11 @@ public class MyStringTest {
         assertEquals(6, mystring.countAlphabeticWords());
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     // Description: Fourth test for counter number with empty string
     public void testCountAlphabeticWords4() {
-        mystring.setString("");
-        assertEquals(0, mystring.countAlphabeticWords());
+        mystring.setString("easterEgg");
+
     }
 
     @Test
@@ -146,9 +146,5 @@ public class MyStringTest {
         assertEquals("012345678Nine", mystring.getString());
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void testSetString() {
-        mystring.setString("easterEgg");
 
-    }
 }
