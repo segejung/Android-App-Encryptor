@@ -71,20 +71,20 @@ public interface MyStringInterface {
      * Replace the individual digits in the current string, between firstPosition and finalPosition
      * (included), with the corresponding name (i.e., string representation) of those digits.
      * The first character in the string is considered to be in Position 1.
-     * <p>
+     *
      * Examples:
      * - String "I'd b3tt3r put s0me d161ts in this 5tr1n6, right?", with firstPosition=17 and finalPosition=23 would be
-     * converted to "I'd b3tt3r put sZerome dOneSix1ts in this 5tr1n6, right?"
+     *   converted to "I'd b3tt3r put sZerome dOneSix1ts in this 5tr1n6, right?"
      * - String "abc416d", with firstPosition=2 and finalPosition=7 would be converted to "abcFourOneSixd"
      *
      * @param firstPosition Position of the first character to consider
-     * @param finalPosition Position of the last character to consider
-     * @return
+     * @param finalPosition   Position of the last character to consider
+
      * @throws NullPointerException        If the current string is null
      * @throws IllegalArgumentException    If "firstPosition" < 1 or "firstPosition" > "finalPosition" (and the string
      *                                     is not null)
      * @throws MyIndexOutOfBoundsException If "finalPosition" is out of bounds (i.e., greater than the length of the
      *                                     string), 1 <= "firstPosition" <= "finalPosition", and the string is not null
      */
-    String convertDigitsToNamesInSubstring(int firstPosition, int finalPosition);
+    void convertDigitsToNamesInSubstring(int firstPosition, int finalPosition);
 }
