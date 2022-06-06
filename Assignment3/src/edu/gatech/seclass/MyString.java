@@ -52,14 +52,14 @@ public class MyString implements MyStringInterface {
         if (this.str == null) {
             throw new NullPointerException();
         }
+       
         //return 0 if current string is empty
         if (this.str == "") {
             return 0;
         }
         //counts words
         String[] words = str.split("[^A-Za-z]+");
-        return words.length-1;
-
+        return words.length;
     }
 
     /**
