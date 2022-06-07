@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     public void handleClick(View view) {
         //handles error messages
         String value = entryTextID.getText().toString();
+        String value2 = argInput1ID.getText().toString();
+        String value3 = argInput2ID.getText().toString();
         String regex = "^.*[a-zA-Z0-9]+.*$";
         boolean result = value.matches(regex);
         if (value.length() == 0) {
@@ -43,9 +45,14 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
             entryTextID.setError("Invalid Entry Text");
+        }
+        if (value2.length() == 0) {
             argInput1ID.setError("Invalid Arg Input 1");
+        }
+        if (value3.length() == 0) {
             argInput2ID.setError("Invalid Arg Input 2");
         }
+
         if (result) {
         }
         //handles that there must be at least one letter or number
