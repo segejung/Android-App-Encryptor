@@ -31,10 +31,7 @@ public class MainActivity extends AppCompatActivity {
         argInput1ID = (EditText) findViewById(R.id.argInput1ID);
         argInput2ID = (EditText) findViewById(R.id.argInput2ID);
         textEncryptedID = (TextView) findViewById(R.id.textEncryptedID);
-
-
     }
-
 
     static boolean isPrime(int n) {
         if (n < 36 && n == 1 || n == 5 || n ==7 || n == 11 || n == 13 || n == 17 || n == 19 || n == 23 || n == 25 || n == 29 || n == 31 || n == 35) {
@@ -102,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
     {
         int finalvalue = Integer.parseInt(arg1);
         int finalvalue2 = Integer.parseInt(arg2);
-        /// Cipher Text initially empty
         String cipher = "";
         for (int i = 0; i < inputText.length; i++)
         {
