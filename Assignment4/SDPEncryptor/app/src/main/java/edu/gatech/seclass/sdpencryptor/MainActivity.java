@@ -13,8 +13,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    static int finalvalue;
-    private String finalvalue2;
     private Button encryptButtonID;
     private EditText entryTextID;
     private EditText argInput1ID;
@@ -36,18 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-    private String encrypt(String Data, String arg1, String arg2) {
-
-        int finalvalue = Integer.parseInt(arg1);
-        int finalvalue2 = Integer.parseInt(arg2);
-        answer = String.valueOf((finalvalue * 4 + finalvalue2) % 36);
-        return answer;
-    }
-
-
-
-
 
 
     static boolean isPrime(int n) {
@@ -111,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
     }
     static String encryptMessage(char[] inputText, String arg1, String arg2)
     {
@@ -132,6 +117,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return cipher;
     }
-
 
 }
