@@ -100,17 +100,27 @@ public class MainActivity extends AppCompatActivity {
         int finalvalue = Integer.parseInt(arg1);
         int finalvalue2 = Integer.parseInt(arg2);
         String cipher = "";
-        for (int i = 0; i < inputText.length; i++)
-        {
+        for (int i = 0; i < inputText.length; i++) {
+            char ch = inputText[i];
+            if (Character.isUpperCase(ch)) {
+                inputText[i] = Character.toLowerCase(ch);
+            }
+            else if (Character.isLowerCase(ch)) {
+                inputText[i] = Character.toUpperCase(ch);
+            }
+
             if (inputText[i] != ' ')
             {
                 cipher = cipher + (char) ((((finalvalue * (inputText[i] - 'A')) + finalvalue2) % 36) + 'A');
-            } else
-            {
+            } else {
                 cipher += inputText[i];
             }
         }
         return cipher;
+
+
+
+
     }
 
 }
