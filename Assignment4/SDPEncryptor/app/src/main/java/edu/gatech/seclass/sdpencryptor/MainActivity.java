@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    static int finalvalue;
+    private String finalvalue2;
     private Button encryptButtonID;
     private EditText entryTextID;
     private EditText argInput1ID;
@@ -36,25 +38,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String encrypt(String Data, String arg1, String arg2) {
+
         int finalvalue = Integer.parseInt(arg1);
         int finalvalue2 = Integer.parseInt(arg2);
         answer = String.valueOf((finalvalue * 4 + finalvalue2) % 36);
         return answer;
     }
 
-    static boolean isPrime(int n)
-    {
+
+
+
+
+
+    static boolean isPrime(int n) {
         if (n < 36 && n == 1 || n == 5 || n ==7 || n == 11 || n == 13 || n == 17 || n == 19 || n == 23 || n == 25 || n == 29 || n == 31 || n == 35) {
             return true;
         } else {
             return false;
         }
+    }
 
+    static boolean isRange(int m) {
+        if (m < 1 || m > 36) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public void handleClick(View view) {
         //handles error messages
-        String answer = "a";
+        //String answer = "";
         String value = entryTextID.getText().toString();
         String value2 = argInput1ID.getText().toString();
         String value3 = argInput2ID.getText().toString();
@@ -64,11 +78,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (isPrime(Integer.valueOf(value2)) == false) {
-
             argInput1ID.setError("Invalid Arg Input 1");
         }
-        if (isPrime(Integer.valueOf(value3)) == false) {
-
+        if (isRange(Integer.valueOf(value3)) == false) {
             argInput2ID.setError("Invalid Arg Input 2");
         }
 
@@ -88,11 +100,38 @@ public class MainActivity extends AppCompatActivity {
         else {
             entryTextID.setError("Invalid Entry Text");
         }
-        if (result == true && value3.length() != 0 && value2.length() != 0 && value.length() != 0 && isPrime(Integer.valueOf(value3)) == true && isPrime(Integer.valueOf(value2)) == true) {
-            answer = encrypt(entryTextID.getText().toString(), argInput1ID.getText().toString(), argInput2ID.getText().toString());
-            textEncryptedID.setText(answer);
+        if (result == true && value3.length() != 0 && value2.length() != 0 && value.length() != 0 && isRange(Integer.valueOf(value3)) == true && isPrime(Integer.valueOf(value2)) == true) {
+            //answer = encrypt(entryTextID.getText().toString(), argInput1ID.getText().toString(), argInput2ID.getText().toString());
+
+            String answer = entryTextID.getText().toString();
+            char[] inputText = answer.toCharArray();
+
+            String answer2 = encryptMessage(inputText, argInput1ID.getText().toString(), argInput2ID.getText().toString());
+            textEncryptedID.setText(answer2);
         }
 
+
+
     }
+    static String encryptMessage(char[] inputText, String arg1, String arg2)
+    {
+        int finalvalue = Integer.parseInt(arg1);
+        int finalvalue2 = Integer.parseInt(arg2);
+        /// Cipher Text initially empty
+        String cipher = "";
+        for (int i = 0; i < inputText.length; i++)
+        {
+            if (inputText[i] != ' ')
+            {
+
+                cipher = cipher + (char) ((((finalvalue * (inputText[i] - 'A')) + finalvalue2) % 36) + 'A');
+            } else // else simply append space character
+            {
+                cipher += inputText[i];
+            }
+        }
+        return cipher;
+    }
+
 
 }
