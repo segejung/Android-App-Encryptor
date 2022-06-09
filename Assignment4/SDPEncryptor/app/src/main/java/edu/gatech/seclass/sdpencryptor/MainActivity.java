@@ -87,15 +87,15 @@ public class MainActivity extends AppCompatActivity {
             entryTextID.setError("Invalid Entry Text");
         }
         if (result == true && value3.length() != 0 && value2.length() != 0 && value.length() != 0 && isRange(Integer.valueOf(value3)) == true && isPrime(Integer.valueOf(value2)) == true) {
-            //answer = encrypt(entryTextID.getText().toString(), argInput1ID.getText().toString(), argInput2ID.getText().toString());
 
             String answer = entryTextID.getText().toString();
             char[] inputText = answer.toCharArray();
 
             String answer2 = encryptMessage(inputText, argInput1ID.getText().toString(), argInput2ID.getText().toString());
             textEncryptedID.setText(answer2);
+        } else {
+            textEncryptedID.setText("");
         }
-
 
     }
     static String encryptMessage(char[] inputText, String arg1, String arg2)
@@ -108,9 +108,8 @@ public class MainActivity extends AppCompatActivity {
         {
             if (inputText[i] != ' ')
             {
-
                 cipher = cipher + (char) ((((finalvalue * (inputText[i] - 'A')) + finalvalue2) % 36) + 'A');
-            } else // else simply append space character
+            } else
             {
                 cipher += inputText[i];
             }
