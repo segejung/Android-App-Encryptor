@@ -44,13 +44,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void handleClick(View view) {
         //handles error messages
+        String answer = "a";
         String value = entryTextID.getText().toString();
         String value2 = argInput1ID.getText().toString();
         String value3 = argInput2ID.getText().toString();
         String regex = "^.*[a-zA-Z0-9]+.*$";
+        
+        textEncryptedID.setText(answer);
 
         boolean result = value.matches(regex);
-        //check if it is coprime
 
         if (isPrime(Integer.valueOf(value2)) == false) {
 
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         if (value3.length() == 0) {
             argInput2ID.setError("Invalid Arg Input 2");
         }
-
+        
         if (result) {
         }
         //handles that there must be at least one letter or number
@@ -87,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
             //toast2.show();
             entryTextID.setError("Invalid Entry Text");
         }
-
-        //textEncryptedID.setText(result);
+        
+      
     }
 
 
