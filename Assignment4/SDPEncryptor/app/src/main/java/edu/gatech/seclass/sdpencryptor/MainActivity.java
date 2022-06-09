@@ -86,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
         if (result == true && value3.length() != 0 && value2.length() != 0 && value.length() != 0 && isRange(Integer.valueOf(value3)) == true && isPrime(Integer.valueOf(value2)) == true) {
 
             String answer = entryTextID.getText().toString();
+            //removing all the special character in the string
+            answer = answer.replaceAll("[^a-zA-Z0-9]", " ");
             char[] inputText = answer.toCharArray();
 
             String answer2 = encryptMessage(inputText, argInput1ID.getText().toString(), argInput2ID.getText().toString());
@@ -109,12 +111,13 @@ public class MainActivity extends AppCompatActivity {
                 inputText[i] = Character.toUpperCase(ch);
             }
 
-            if (inputText[i] != ' ')
-            {
+
+            if (inputText[i] != ' ') {
                 cipher = cipher + (char) ((((finalvalue * (inputText[i] - 'A')) + finalvalue2) % 36) + 'A');
             } else {
                 cipher += inputText[i];
             }
+
         }
         return cipher;
 
