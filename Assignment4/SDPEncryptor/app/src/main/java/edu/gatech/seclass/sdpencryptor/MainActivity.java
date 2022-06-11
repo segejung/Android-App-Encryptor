@@ -111,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
                 inputText[i] = Character.toUpperCase(ch);
             }
 
-
             if (inputText[i] != ' ') {
                 cipher = cipher + (char) ((((finalvalue * (inputText[i] - 'A')) + finalvalue2) % 36) + 'A');
             } else {
