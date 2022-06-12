@@ -189,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
                 inputText[i] = Character.toUpperCase(ch);
                 cipher = cipher + (char) ((((finalvalue * (inputText[i] - 'A')) + finalvalue2) % 36) + 'A');
             }
+
             else if ((inputText[i] == 'A' || inputText[i] == 'B' || inputText[i] == 'C' || inputText[i] == 'D' || inputText[i] == 'E' || inputText[i] == 'F' || inputText[i] == 'G' || inputText[i] == 'H' || inputText[i] == 'I' || inputText[i] == 'J' || inputText[i] == 'K' || inputText[i] == 'L' || inputText[i] == 'M' || inputText[i] == 'N' || inputText[i] == 'O' || inputText[i] == 'P' || inputText[i] == 'Q' || inputText[i] == 'R' || inputText[i] == 'S' || inputText[i] == 'T' || inputText[i] == 'U' || inputText[i] == 'V' || inputText[i] == 'W' || inputText[i] == 'X' || inputText[i] == 'Y' || inputText[i] == 'Z'))
             {
                 inputText[i] = Character.toLowerCase(ch);
