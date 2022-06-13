@@ -1,6 +1,8 @@
 package edu.gatech.seclass.sdpencryptor;
 
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import android.os.Bundle;
 import android.view.View;
@@ -108,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         String lowercase = "abcdefghijklmnopqrstuvwxyz";
         String number = "0123456789";
         String specialchar = "[^a-zA-Z0-9]";
+        String specialCharactersString = "!@#$%&*()'+,-./:;<=>?[]^_`{|} ";
         char[] upperArray = uppercase.toCharArray();
         char[] lowerArray = lowercase.toCharArray();
         char[] numberArray = number.toCharArray();
@@ -125,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
             }
-            if (inputText[i] != ' ') {
+            if (!specialCharactersString.contains(Character.toString(ch))) {
                 if (new String(lowerArray).indexOf(inputText[i]) == -1) {
                     int findValue = ((((finalvalue * (findIndex(alphaArray2, inputText[i]))) + finalvalue2) % 36));
                     cipher.append((char) Character.toLowerCase(alphanumeric2.charAt(findValue)));
@@ -150,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
         } return cipher.toString();
 
     }
+
+
     public static int findIndex(char arr[], int t)
     {
         if (arr == null) {
