@@ -101,21 +101,6 @@ public class MainActivity extends AppCompatActivity {
         int finalvalue = Integer.parseInt(arg1);
         int finalvalue2 = Integer.parseInt(arg2);
         StringBuilder cipher = new StringBuilder();
-        int xmen = 0;
-
-            //if (Character.isUpperCase(ch)) {
-            //    inputText[i] = Character.toLowerCase(ch);
-            //}
-            //else if (Character.isLowerCase(ch)) {
-            //    inputText[i] = Character.toUpperCase(ch);
-            //}
-            /**
-             if (inputText[i] != ' ') {
-             cipher = cipher + (char) ((((finalvalue * (inputText[i] - 'A')) + finalvalue2) % 36) + 'A');
-             } else {
-             cipher += inputText[i];
-             }
-             **/
 
         String alphanumeric = "abcdefghijklmnopqrstuvwxyz0123456789";
         String alphanumeric2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -133,30 +118,26 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i < inputText.length; i++) {
             char ch = inputText[i];
-            /**
-            if (Character.isUpperCase(ch)) {
-                inputText[i] = Character.toLowerCase(ch);
-            } else {
-                inputText[i] = Character.toLowerCase(ch);
-            }
-             **/
-            boolean contains = true;
+            boolean contains = false;
             for (char c : specialArray) {
                 if (c == inputText[i]) {
-                    contains = false;
+                    contains = true;
                     break;
                 }
             }
-
-            if (new String(lowerArray).indexOf(inputText[i]) == -1) {
-                int findValue = ((((finalvalue * (findIndex(alphaArray2, inputText[i]))) + finalvalue2) % 36));
-                cipher.append((char) Character.toLowerCase(alphanumeric2.charAt(findValue)));
-            } else if (new String(upperArray).indexOf(inputText[i]) == -1) {
-                int findValue = ((((finalvalue * (findIndex(alphaArray, inputText[i]))) + finalvalue2) % 36));
-                cipher.append((char) Character.toUpperCase(alphanumeric.charAt(findValue)));
-            } else if (!contains) {
+            if (inputText[i] != ' ') {
+                if (new String(lowerArray).indexOf(inputText[i]) == -1) {
+                    int findValue = ((((finalvalue * (findIndex(alphaArray2, inputText[i]))) + finalvalue2) % 36));
+                    cipher.append((char) Character.toLowerCase(alphanumeric2.charAt(findValue)));
+                } else if (new String(upperArray).indexOf(inputText[i]) == -1) {
+                    int findValue = ((((finalvalue * (findIndex(alphaArray, inputText[i]))) + finalvalue2) % 36));
+                    cipher.append((char) Character.toUpperCase(alphanumeric.charAt(findValue)));
+                }
+            } else {
                 cipher.append(inputText[i]);
             }
+
+
 
 
             //} else if (new String(numberArray).indexOf(inputText[i]) == -1) {
