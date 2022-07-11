@@ -60,33 +60,61 @@ public class FlawedClass {
     }
 
     //Task4
-    public void flawedMethod4 (int x, int y) {
-        int g = x;
-        int h = y;
-        int result;
-        if (g > 0){
-            result = g/h;
+    public static int flawedMethod4(int a, int b, int c, int d) {
+
+        int result = 0;
+        if (a != 0) {
+            if ( (b < 0) && ((c > 0) || (d > 0)) ) {
+                result = 1;
+            } else {
+                result = 2;
+            }
+        } else {
+            result = 3;
         }
-        else if (g == 0){
-            result = g/h;
-        }
-        else
-            result = g/h;
+        return result;
     }
 
     //Task5
-    public boolean flawedMethod5 (boolean a, boolean b) {
-        int x = 3;
-        int y = 1;
-        if(a)
-            x += y;
-        else
-            y = y*x;
-        if(b)
-            y -= x;
-        else
-            y -= 1;
-        return ((x/y)>= 0);
+    public static String[] flawedMethod5() {
+        String a[] = new String[7];
+        /*
+            public static boolean flawedMethod5(boolean a, boolean b) {
+            int x = 2;
+            int y = 0;
+            if (a)
+                x = y;
+            else
+                x = (2*x + 1);
+            if (b)
+                y = 4;
+            else
+                y -= 5;
+            return ((42/(x+y)) >= 0);
+            }
+        */
+        //
+        // Replace the "?" in column "output" with "T", "F", or "E":
+        //
+        //         | a | b |output|
+        //         ================
+        a[0] =  /* | T | T | <T, F, or E> (e.g., "T") */ "T";
+        a[1] =  /* | T | F | <T, F, or E> (e.g., "T") */ "F";
+        a[2] =  /* | F | T | <T, F, or E> (e.g., "T") */ "T";
+        a[3] =  /* | F | F | <T, F, or E> (e.g., "T") */ "E";
+        // ================
+        //
+        // Replace the "?" in the following sentences with "NEVER",
+        // "SOMETIMES" or "ALWAYS":
+        //
+        a[4] = /* Test suites with 100% path coverage */ "ALWAYS";
+        /*reveal the fault in this method.*/
+        a[5] = /* Test suites with 100% branch coverage */ "SOMETIMES";
+        /*reveal the fault in this method.*/
+        a[6] =  /* Test suites with 100% statement coverage */ "SOMETIMES";
+        /*reveal the fault in this method.*/
+        // ================
+        return a;
     }
 }
 

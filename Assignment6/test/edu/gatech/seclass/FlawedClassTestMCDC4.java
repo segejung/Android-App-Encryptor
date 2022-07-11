@@ -7,8 +7,9 @@ public class FlawedClassTestMCDC4 {
     @Test
     public void FlawedClassTestMCDC4() {
         FlawedClass run = new FlawedClass();
-        run.flawedMethod4(1,1); //test specification
-        run.flawedMethod4(0,2); //test specification
+        run.flawedMethod4(1,-1,1,1); //test specification
+        run.flawedMethod4(1,-1,0,-1); //test specification
+        run.flawedMethod4(0,2,2,2); //test specification
     }
 
 }
