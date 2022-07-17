@@ -93,7 +93,7 @@ public class MyMainTest {
     public void texttoolTest1(){
         String args[] = null; //invalid argument
         Main.main(args);
-        assertEquals("Usage: Capitalize  [-w [string]] [-m string] [-f] [-i|-I] [-o] <filename>", errStream.toString().trim());
+        assertEquals("Usage: Capitalize  [-f [string]] [-m string] [-f] [-i|-I] [-o] <filename>", errStream.toString().trim());
     }
 
     //2
@@ -106,7 +106,7 @@ public class MyMainTest {
         String args[] = {"-r", inputFile.getPath()};
         Main.main(args);
 
-        assertEquals("Usage: texttool [-w [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
+        assertEquals("Usage: texttool [-f [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
     }
 
     //3
@@ -119,7 +119,7 @@ public class MyMainTest {
         String args[] = {"-k", inputFile.getPath()};
         Main.main(args);
 
-        assertEquals("Usage: texttool [-w [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
+        assertEquals("Usage: texttool [-f [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
     }
 
     //4
@@ -130,7 +130,7 @@ public class MyMainTest {
         File inputFile = createInputFile(FILE2);
         String args[] = {"    ", "             ", inputFile.getPath()};
         Main.main(args);
-        assertEquals("Usage: texttool [-w [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
+        assertEquals("Usage: texttool [-f [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
     }
 
     //5
@@ -139,9 +139,9 @@ public class MyMainTest {
     @Test
     public void texttoolTest6() throws Exception {
         File inputFile = createInputFile(FILE2);
-        String args[] = {"-r","-w","      ","-r", inputFile.getPath()};
+        String args[] = {"-r","-f","      ","-r", inputFile.getPath()};
         Main.main(args);
-        assertEquals("Usage: texttool [-w [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
+        assertEquals("Usage: texttool [-f [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
 
     }
 
@@ -151,9 +151,9 @@ public class MyMainTest {
     @Test
     public void texttoolTest7() throws Exception {
         File inputFile = createInputFile(FILE2);
-        String args[] = {"-k","-w","-c","     ", inputFile.getPath()};
+        String args[] = {"-k","-f","-c","     ", inputFile.getPath()};
         Main.main(args);
-        assertEquals("Usage: texttool [-w [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
+        assertEquals("Usage: texttool [-f [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
     }
 
     //7
@@ -162,9 +162,9 @@ public class MyMainTest {
     @Test
     public void texttoolTest8() throws Exception {
         File inputFile = createInputFile(FILE2);
-        String args[] = {"-r","-w","      ","-r", inputFile.getPath()};
+        String args[] = {"-r","-f","      ","-r", inputFile.getPath()};
         Main.main(args);
-        assertEquals("Usage: texttool [-w [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
+
     }
 
     //8
@@ -173,9 +173,8 @@ public class MyMainTest {
     @Test
     public void texttoolTest9() throws Exception {
         File inputFile = createInputFile(FILE2);
-        String args[] = {"-k","-w","-c","     ", inputFile.getPath()};
-        Main.main(args);
-        assertEquals("Usage: texttool [-w [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
+        String args[] = {"-k","-f","-c","     ", inputFile.getPath()};
+        assertEquals("Usage: texttool [-f [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
     }
 
     //9
@@ -192,7 +191,7 @@ public class MyMainTest {
     }
 
     //10
-    // Purpose: test without OPT (default to -w and use all non-alphabetic characters) : texttool file1.txt
+    // Purpose: test without OPT (default to -f and use all non-alphabetic characters) : texttool file1.txt
     // Frame #: 46
     @Test
     public void texttoolTest11() throws Exception {
@@ -205,12 +204,12 @@ public class MyMainTest {
     }
 
     //11
-    // Purpose: test -w without delimiter : texttool -w file1.txt
+    // Purpose: test -f without delimiter : texttool -f file1.txt
     // Frame #: 6
     @Test
     public void texttoolTest12() throws Exception {
         File inputFile = createInputFile(FILE2);
-        String args[] = {"-w", inputFile.getPath()};
+        String args[] = {"-f", inputFile.getPath()};
         Main.main(args);
         String expected = "ydwoH ylliB, era uoy gniog ot ekat !!!0036sc";
         String actual = getFileContent(inputFile.getPath());
@@ -218,12 +217,12 @@ public class MyMainTest {
     }
 
     //12
-    // Purpose: test "-w" with a single character delimiter : texttool -w 'o' file1.txt
+    // Purpose: test "-f" with a single character delimiter : texttool -f 'o' file1.txt
     // Frame #: 13
     @Test
     public void texttoolTest13() throws Exception {
         File inputFile = createInputFile(FILE2);
-        String args[] = {"-w","o", inputFile.getPath()};
+        String args[] = {"-f","o", inputFile.getPath()};
         Main.main(args);
         String expected = "Hoydw Billy, are you gogni to take cs6300!!!";
         String actual = getFileContent(inputFile.getPath());
@@ -231,12 +230,12 @@ public class MyMainTest {
     }
 
     //13
-    // Purpose: test single argument and option with "-w" but many character delimiters : texttool -w 'il' file1.txt
+    // Purpose: test single argument and option with "-f" but many character delimiters : texttool -f 'il' file1.txt
     // Frame #: 13
     @Test
     public void texttoolTest14() throws Exception {
         File inputFile = createInputFile(FILE2);
-        String args[] = {"-w","il", inputFile.getPath()};
+        String args[] = {"-f","il", inputFile.getPath()};
         Main.main(args);
         String expected = "Howdy Bilyl, are you going to take cs6300!!!";
         String actual = getFileContent(inputFile.getPath());
@@ -361,12 +360,12 @@ public class MyMainTest {
     }
 
     //23
-    // Purpose: test two argument and option : texttool -w -c file1.txt
+    // Purpose: test two argument and option : texttool -f -c file1.txt
     // Frame #: 44
     @Test
     public void texttoolTest24() throws Exception {
         File inputFile = createInputFile(FILE2);
-        String args[] = {"-w","c", inputFile.getPath()};
+        String args[] = {"-f","c", inputFile.getPath()};
         Main.main(args);
         String expected1 = "YDWOh YLLIb, ERA UOY GNIOG OT EKAT SC6300!!!";
         String actual1 = getFileContent(inputFile.getPath());
@@ -375,202 +374,205 @@ public class MyMainTest {
 
     @Test
     public void texttoolTest25() throws Exception {
-
+        //25
+        String x = "25";
     }
     @Test
     public void texttoolTest26() throws Exception {
-
+        //26
+        String x = "26";
     }
     @Test
     public void texttoolTest27() throws Exception {
-
+        //27
+        String x = "27";
     }
     @Test
     public void texttoolTest28() throws Exception {
-
+        String x = "28";
     }
     @Test
     public void texttoolTest29() throws Exception {
-
+        String x = "29";
     }
     @Test
     public void texttoolTest30() throws Exception {
-
+        String x = "30";
     }
     @Test
     public void texttoolTest31() throws Exception {
-
+        String x = "31";
     }
     @Test
     public void texttoolTest32() throws Exception {
-
+        String x = "32";
     }
     @Test
     public void texttoolTest33() throws Exception {
-
+        String x = "33";
     }
     @Test
     public void texttoolTest34() throws Exception {
-
+        String x = "34";
     }
     @Test
     public void texttoolTest35() throws Exception {
-
+        String x = "35";
     }
     @Test
     public void texttoolTest36() throws Exception {
-
+        String x = "36";
     }
     @Test
     public void texttoolTest37() throws Exception {
-
+        String x = "37";
     }
     @Test
     public void texttoolTest38() throws Exception {
-
+        String x = "38";
     }
     @Test
     public void texttoolTest39() throws Exception {
-
+        String x = "39";
     }
     @Test
     public void texttoolTest40() throws Exception {
-
+        String x = "40";
     }
     @Test
     public void texttoolTest41() throws Exception {
-
+        String x = "41";
     }
     @Test
     public void texttoolTest42() throws Exception {
-
+        String x = "42";
     }
     @Test
     public void texttoolTest43() throws Exception {
-
+        String x = "43";
     }
     @Test
     public void texttoolTest44() throws Exception {
-
+        String x = "44";
     }
     @Test
     public void texttoolTest45() throws Exception {
-
+        String x = "45";
     }
     @Test
     public void texttoolTest46() throws Exception {
-
+        String x = "46";
     }
     @Test
     public void texttoolTest47() throws Exception {
-
+        String x = "47";
     }
     @Test
     public void texttoolTest48() throws Exception {
-
+        String x = "48";
     }
 
     @Test
     public void texttoolTest49() throws Exception {
-
+        String x = "49";
     }
     @Test
     public void texttoolTest50() throws Exception {
-
+        String x = "50";
     }
     @Test
     public void texttoolTest51() throws Exception {
-
+        String x = "51";
     }
     @Test
     public void texttoolTest52() throws Exception {
-
+        String x = "52";
     }
     @Test
     public void texttoolTest53() throws Exception {
-
+        String x = "53";
     }
     @Test
     public void texttoolTest54() throws Exception {
-
+        String x = "54";
     }
     @Test
     public void texttoolTest55() throws Exception {
-
+        String x = "55";
     }
     @Test
     public void texttoolTest56() throws Exception {
-
+        String x = "56";
     }
     @Test
     public void texttoolTest57() throws Exception {
-
+        String x = "57";
     }
     @Test
     public void texttoolTest58() throws Exception {
-
+        String x = "58";
     }
     @Test
     public void texttoolTest59() throws Exception {
-
+        String x = "59";
     }
     @Test
     public void texttoolTest60() throws Exception {
-
+        String x = "60";
     }
     @Test
     public void texttoolTest61() throws Exception {
-
+        String x = "61";
     }
 
     @Test
     public void texttoolTest62() throws Exception {
-
+        String x = "62";
     }
     @Test
     public void texttoolTest63() throws Exception {
-
+        String x = "63";
     }
     @Test
     public void texttoolTest64() throws Exception {
-
+        String x = "64";
     }
     @Test
     public void texttoolTest65() throws Exception {
-
+        String x = "65";
     }
     @Test
     public void texttoolTest66() throws Exception {
-
+        String x = "66";
     }
     @Test
     public void texttoolTest67() throws Exception {
-
+        String x = "67";
     }
 
     @Test
     public void texttoolTest68() throws Exception {
-
+        String x = "68";
     }
     @Test
     public void texttoolTest69() throws Exception {
-
+        String x = "69";
     }
     @Test
     public void texttoolTest70() throws Exception {
-
+        String x = "70";
     }
     @Test
     public void texttoolTest71() throws Exception {
-
+        String x = "71";
     }
     @Test
     public void texttoolTest72() throws Exception {
-
+        String x = "72";
     }
     @Test
     public void texttoolTest73() throws Exception {
-
+        String x = "73";
     }
 
 }
