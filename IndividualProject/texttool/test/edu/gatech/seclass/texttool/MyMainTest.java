@@ -126,6 +126,17 @@ public class MyMainTest {
     //Purpose: test invalid opts 1
     //Frame #: 2
     @Test
+    public void texttoolTest4() throws Exception {
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"", "             ", inputFile.getPath()};
+        Main.main(args);
+        assertEquals("Usage: texttool [-f [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
+    }
+
+    //4
+    //Purpose: test invalid opts 1
+    //Frame #: 2
+    @Test
     public void texttoolTest5() throws Exception {
         File inputFile = createInputFile(FILE2);
         String args[] = {"    ", "             ", inputFile.getPath()};
@@ -376,52 +387,88 @@ public class MyMainTest {
     public void texttoolTest25() throws Exception {
         //25
         String x = "25";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"-r","-f","      ","-r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest26() throws Exception {
         //26
         String x = "26";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"-x","-f","      ","-r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest27() throws Exception {
         //27
         String x = "27";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"-i","-f","      ","-r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest28() throws Exception {
         String x = "28";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"-rx","-f","      ","-r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest29() throws Exception {
         String x = "29";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"-r","-fx","      ","-r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest30() throws Exception {
         String x = "30";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"-rxx","-f","      ","-r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest31() throws Exception {
         String x = "31";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"-o","-f","      ","-r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest32() throws Exception {
         String x = "32";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"-r]ro","-f","      ","-r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest33() throws Exception {
         String x = "33";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"-f","      ","-r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest34() throws Exception {
         String x = "34";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"-oi","-f","      ","-r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest35() throws Exception {
         String x = "35";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"-r","-f","-r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest36() throws Exception {
         String x = "36";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest37() throws Exception {
