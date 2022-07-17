@@ -1,7 +1,4 @@
 # texttool <filename>
-
-# File
-  Size: 
 	
 # Filename
     Validity of filename:
@@ -11,7 +8,7 @@
         Valid.
         Invalid. [error]
     Size: 
-	Empty. [property emptyfile]
+	Empty. [error]
 	Not empty. 
 
 # OPT -f,-o,-r,-i,-p,-d,-c
@@ -28,7 +25,7 @@
 # [<string of delimiters>]
     Delimiters:
         empty. [if f]
-        specified.[if w] [property specifiedDelimiters]
+        specified.[if f] [property specifiedDelimiters]
 # [<string of remove>]
     RemoveString:
         empty. [error]
@@ -55,6 +52,6 @@
         Alphabetic characters.[if !empty]
         Non-alphabetic characters.[if !empty]
         Uppercase.[if !empty]
-        Lowercase.[if !empty]
+        Lowercase.[if !empty]	
         Whitespace.[if !empty]
         No whitespace.[if !empty]

@@ -1,0 +1,828 @@
+
+Test Case 1  		<error>
+   Validity of filename :  Invalid
+
+
+Test Case 2  		<error>
+   Validity of OPT :  Invalid
+
+
+Test Case 3  		<error>
+   Size :  Empty
+
+
+Test Case 4  		<error>
+   RemoveString :  empty
+
+
+Test Case 5  		<error>
+   KeepString :  empty
+
+
+Test Case 6  		<single>
+   File length is :  Empty
+
+
+Test Case 7  		(Key = 1.1.2.1.1.0.0.2.1.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  empty
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Words
+
+
+Test Case 8  		(Key = 1.1.2.1.1.0.0.2.5.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  empty
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Alphabetic characters
+
+
+Test Case 9  		(Key = 1.1.2.1.1.0.0.2.6.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  empty
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Non-alphabetic characters
+
+
+Test Case 10 		(Key = 1.1.2.1.1.0.0.2.7.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  empty
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Uppercase
+
+
+Test Case 11 		(Key = 1.1.2.1.1.0.0.2.8.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  empty
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Lowercase
+
+
+Test Case 12 		(Key = 1.1.2.1.1.0.0.2.9.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  empty
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Whitespace
+
+
+Test Case 13 		(Key = 1.1.2.1.1.0.0.2.10.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  empty
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  No whitespace
+
+
+Test Case 14 		(Key = 1.1.2.1.2.0.0.2.1.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  specified
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Words
+
+
+Test Case 15 		(Key = 1.1.2.1.2.0.0.2.4.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  specified
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Delimiters
+
+
+Test Case 16 		(Key = 1.1.2.1.2.0.0.2.5.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  specified
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Alphabetic characters
+
+
+Test Case 17 		(Key = 1.1.2.1.2.0.0.2.6.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  specified
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Non-alphabetic characters
+
+
+Test Case 18 		(Key = 1.1.2.1.2.0.0.2.7.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  specified
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Uppercase
+
+
+Test Case 19 		(Key = 1.1.2.1.2.0.0.2.8.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  specified
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Lowercase
+
+
+Test Case 20 		(Key = 1.1.2.1.2.0.0.2.9.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  specified
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Whitespace
+
+
+Test Case 21 		(Key = 1.1.2.1.2.0.0.2.10.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  f
+   Delimiters           :  specified
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  No whitespace
+
+
+Test Case 22 		(Key = 1.1.2.2.0.2.0.2.1.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  o
+   Delimiters           :  <n/a>
+   RemoveString         :  specified
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Words
+
+
+Test Case 23 		(Key = 1.1.2.2.0.2.0.2.2.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  o
+   Delimiters           :  <n/a>
+   RemoveString         :  specified
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  RemoveString
+
+
+Test Case 24 		(Key = 1.1.2.2.0.2.0.2.5.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  o
+   Delimiters           :  <n/a>
+   RemoveString         :  specified
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Alphabetic characters
+
+
+Test Case 25 		(Key = 1.1.2.2.0.2.0.2.6.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  o
+   Delimiters           :  <n/a>
+   RemoveString         :  specified
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Non-alphabetic characters
+
+
+Test Case 26 		(Key = 1.1.2.2.0.2.0.2.7.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  o
+   Delimiters           :  <n/a>
+   RemoveString         :  specified
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Uppercase
+
+
+Test Case 27 		(Key = 1.1.2.2.0.2.0.2.8.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  o
+   Delimiters           :  <n/a>
+   RemoveString         :  specified
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Lowercase
+
+
+Test Case 28 		(Key = 1.1.2.2.0.2.0.2.9.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  o
+   Delimiters           :  <n/a>
+   RemoveString         :  specified
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Whitespace
+
+
+Test Case 29 		(Key = 1.1.2.2.0.2.0.2.10.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  o
+   Delimiters           :  <n/a>
+   RemoveString         :  specified
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  No whitespace
+
+
+Test Case 30 		(Key = 1.1.2.3.0.0.2.2.1.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Words
+
+
+Test Case 31 		(Key = 1.1.2.3.0.0.2.2.3.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  KeepString
+
+
+Test Case 32 		(Key = 1.1.2.3.0.0.2.2.5.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Alphabetic characters
+
+
+Test Case 33 		(Key = 1.1.2.3.0.0.2.2.6.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Non-alphabetic characters
+
+
+Test Case 34 		(Key = 1.1.2.3.0.0.2.2.7.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Uppercase
+
+
+Test Case 35 		(Key = 1.1.2.3.0.0.2.2.8.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Lowercase
+
+
+Test Case 36 		(Key = 1.1.2.3.0.0.2.2.9.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Whitespace
+
+
+Test Case 37 		(Key = 1.1.2.3.0.0.2.2.10.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  No whitespace
+
+
+Test Case 38 		(Key = 1.1.2.4.0.0.2.2.1.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r i
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Words
+
+
+Test Case 39 		(Key = 1.1.2.4.0.0.2.2.3.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r i
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  KeepString
+
+
+Test Case 40 		(Key = 1.1.2.4.0.0.2.2.5.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r i
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Alphabetic characters
+
+
+Test Case 41 		(Key = 1.1.2.4.0.0.2.2.6.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r i
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Non-alphabetic characters
+
+
+Test Case 42 		(Key = 1.1.2.4.0.0.2.2.7.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r i
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Uppercase
+
+
+Test Case 43 		(Key = 1.1.2.4.0.0.2.2.8.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r i
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Lowercase
+
+
+Test Case 44 		(Key = 1.1.2.4.0.0.2.2.9.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r i
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  Whitespace
+
+
+Test Case 45 		(Key = 1.1.2.4.0.0.2.2.10.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  r i
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  specified
+   File length is       :  Not empty
+   File contains        :  No whitespace
+
+
+Test Case 46 		(Key = 1.1.2.5.0.0.0.2.1.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  p
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Words
+
+
+Test Case 47 		(Key = 1.1.2.5.0.0.0.2.5.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  p
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Alphabetic characters
+
+
+Test Case 48 		(Key = 1.1.2.5.0.0.0.2.6.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  p
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Non-alphabetic characters
+
+
+Test Case 49 		(Key = 1.1.2.5.0.0.0.2.7.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  p
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Uppercase
+
+
+Test Case 50 		(Key = 1.1.2.5.0.0.0.2.8.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  p
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Lowercase
+
+
+Test Case 51 		(Key = 1.1.2.5.0.0.0.2.9.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  p
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Whitespace
+
+
+Test Case 52 		(Key = 1.1.2.5.0.0.0.2.10.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  p
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  No whitespace
+
+
+Test Case 53 		(Key = 1.1.2.6.0.0.0.2.1.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  d
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Words
+
+
+Test Case 54 		(Key = 1.1.2.6.0.0.0.2.5.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  d
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Alphabetic characters
+
+
+Test Case 55 		(Key = 1.1.2.6.0.0.0.2.6.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  d
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Non-alphabetic characters
+
+
+Test Case 56 		(Key = 1.1.2.6.0.0.0.2.7.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  d
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Uppercase
+
+
+Test Case 57 		(Key = 1.1.2.6.0.0.0.2.8.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  d
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Lowercase
+
+
+Test Case 58 		(Key = 1.1.2.6.0.0.0.2.9.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  d
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Whitespace
+
+
+Test Case 59 		(Key = 1.1.2.6.0.0.0.2.10.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  d
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  No whitespace
+
+
+Test Case 60 		(Key = 1.1.2.7.0.0.0.2.1.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  c
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Words
+
+
+Test Case 61 		(Key = 1.1.2.7.0.0.0.2.5.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  c
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Alphabetic characters
+
+
+Test Case 62 		(Key = 1.1.2.7.0.0.0.2.6.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  c
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Non-alphabetic characters
+
+
+Test Case 63 		(Key = 1.1.2.7.0.0.0.2.7.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  c
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Uppercase
+
+
+Test Case 64 		(Key = 1.1.2.7.0.0.0.2.8.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  c
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Lowercase
+
+
+Test Case 65 		(Key = 1.1.2.7.0.0.0.2.9.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  c
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Whitespace
+
+
+Test Case 66 		(Key = 1.1.2.7.0.0.0.2.10.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  c
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  No whitespace
+
+
+Test Case 67 		(Key = 1.1.2.8.0.0.0.2.1.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  empty
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Words
+
+
+Test Case 68 		(Key = 1.1.2.8.0.0.0.2.5.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  empty
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Alphabetic characters
+
+
+Test Case 69 		(Key = 1.1.2.8.0.0.0.2.6.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  empty
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Non-alphabetic characters
+
+
+Test Case 70 		(Key = 1.1.2.8.0.0.0.2.7.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  empty
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Uppercase
+
+
+Test Case 71 		(Key = 1.1.2.8.0.0.0.2.8.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  empty
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Lowercase
+
+
+Test Case 72 		(Key = 1.1.2.8.0.0.0.2.9.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  empty
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  Whitespace
+
+
+Test Case 73 		(Key = 1.1.2.8.0.0.0.2.10.)
+   Validity of filename :  Valid
+   Validity of OPT      :  Valid
+   Size                 :  Not empty
+   OPT                  :  empty
+   Delimiters           :  <n/a>
+   RemoveString         :  <n/a>
+   KeepString           :  <n/a>
+   File length is       :  Not empty
+   File contains        :  No whitespace
+
