@@ -1,0 +1,60 @@
+# texttool <filename>
+
+# File
+  Size: 
+	
+# Filename
+    Validity of filename:
+        Valid.
+        Invalid. [error]
+    Validity of OPT:
+        Valid.
+        Invalid. [error]
+    Size: 
+	Empty. [property emptyfile]
+	Not empty. 
+
+# OPT -f,-o,-r,-i,-p,-d,-c
+    OPT:
+        f.      [property f]
+        o.      [property o]
+        r.      [property r]
+	r i.	[property r i]
+	p.      [property p]
+	d.      [property d]
+	c.      [property c]
+        empty.
+
+# [<string of delimiters>]
+    Delimiters:
+        empty. [if f]
+        specified.[if w] [property specifiedDelimiters]
+# [<string of remove>]
+    RemoveString:
+        empty. [error]
+	non-alphabetic [error]
+        specified.[if o] [property specifiedRemoveString]
+
+# [<string of keep>]
+    KeepString:
+        empty. [error]
+	non-alphabetic [error]
+        specified.[if r] [property specifiedKeepString]
+
+# File length
+    File length is:
+        Empty. [single][property empty]
+        Not empty.
+
+# File Content
+    File contains:
+        Words. [if !empty]
+	RemoveString. [if !empty][if specifiedRemoveString]
+        KeepString. [if !empty][if specifiedKeepString]
+        Delimiters. [if !empty][if specifiedDelimiters]
+        Alphabetic characters.[if !empty]
+        Non-alphabetic characters.[if !empty]
+        Uppercase.[if !empty]
+        Lowercase.[if !empty]
+        Whitespace.[if !empty]
+        No whitespace.[if !empty]
