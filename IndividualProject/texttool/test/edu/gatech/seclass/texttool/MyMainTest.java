@@ -141,7 +141,7 @@ public class MyMainTest {
         File inputFile = createInputFile(FILE2);
         String args[] = {"    ", "             ", inputFile.getPath()};
         Main.main(args);
-        assertEquals("Usage: texttool [-f [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
+        assertEquals("Usage:[-f [string]] [-r string | -k string] [-c] <filename>", errStream.toString().trim());
     }
 
     //5
