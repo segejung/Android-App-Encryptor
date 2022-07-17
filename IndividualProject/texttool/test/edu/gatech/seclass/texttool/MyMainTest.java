@@ -473,153 +473,266 @@ public class MyMainTest {
     @Test
     public void texttoolTest37() throws Exception {
         String x = "37";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
+
     }
     @Test
     public void texttoolTest38() throws Exception {
         String x = "38";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest39() throws Exception {
         String x = "39";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest40() throws Exception {
         String x = "40";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest41() throws Exception {
         String x = "41";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest42() throws Exception {
         String x = "42";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest43() throws Exception {
         String x = "43";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest44() throws Exception {
         String x = "44";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest45() throws Exception {
         String x = "45";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest46() throws Exception {
         String x = "46";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest47() throws Exception {
         String x = "47";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest48() throws Exception {
         String x = "48";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
 
     @Test
     public void texttoolTest49() throws Exception {
         String x = "49";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest50() throws Exception {
         String x = "50";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest51() throws Exception {
         String x = "51";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest52() throws Exception {
         String x = "52";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest53() throws Exception {
         String x = "53";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest54() throws Exception {
         String x = "54";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest55() throws Exception {
         String x = "55";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest56() throws Exception {
         String x = "56";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest57() throws Exception {
         String x = "57";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest58() throws Exception {
         String x = "58";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest59() throws Exception {
         String x = "59";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest60() throws Exception {
         String x = "60";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest61() throws Exception {
         String x = "61";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
+
 
     @Test
     public void texttoolTest62() throws Exception {
         String x = "62";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest63() throws Exception {
         String x = "63";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest64() throws Exception {
         String x = "64";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest65() throws Exception {
         String x = "65";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest66() throws Exception {
         String x = "66";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest67() throws Exception {
         String x = "67";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
 
     @Test
     public void texttoolTest68() throws Exception {
         String x = "68";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest69() throws Exception {
         String x = "69";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest70() throws Exception {
         String x = "70";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest71() throws Exception {
         String x = "71";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest72() throws Exception {
         String x = "72";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
     @Test
     public void texttoolTest73() throws Exception {
         String x = "73";
+        File inputFile = createInputFile(FILE2);
+        String args[] = {"--r", inputFile.getPath()};
+        Main.main(args);
     }
 
 }
