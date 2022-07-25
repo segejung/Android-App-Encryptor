@@ -237,7 +237,7 @@ public class MyMainTest {
 
         assertTrue("stderr output should be empty", errStream.toString().isEmpty());
         assertTrue("stdout output should be empty", outStream.toString().isEmpty());
-        assertEquals("input file content not matched", input, getFileContent(inputFile.getPath()));
+        assertEquals("input file content not matched", expected, getFileContent(inputFile.getPath()));
     }
     @Test
     public void texttoolTest11() throws Exception {
@@ -567,32 +567,35 @@ public class MyMainTest {
     public void texttoolTest35() throws Exception {
         String input = "thisisgood" + System.lineSeparator();
 
+        String expected = "hellothisisgood" + System.lineSeparator();
         File inputFile = createInputFile(input);
-        String[] args = {"-p", "-f", inputFile.getPath()};
+        String[] args = {"-p", "hello", inputFile.getPath()};
         Main.main(args);
 
-        assertEquals("stderr output does not match", "Usage: texttool [ -f | -o output_file_name | -i | -r old new | -p prefix | -c n | -d n ] FILE", errStream.toString().strip());
-        assertTrue("stdout output should be empty", outStream.toString().isEmpty());
+        assertTrue("stderr output should be empty", errStream.toString().isEmpty());
+        assertEquals("stdout output does not match", expected, outStream.toString());
         assertEquals("input file content not matched", input, getFileContent(inputFile.getPath()));
     }
     @Test
     public void texttoolTest36() throws Exception {
         String input = "thisisgood" + System.lineSeparator();
 
+        String expected = "hellouijtjthppe" + System.lineSeparator();
         File inputFile = createInputFile(input);
-        String[] args = {"-p", "-o", inputFile.getPath()};
+        String[] args = {"-c", "1", "-p", "hello", inputFile.getPath()};
         Main.main(args);
 
-        assertEquals("stderr output does not match", "Usage: texttool [ -f | -o output_file_name | -i | -r old new | -p prefix | -c n | -d n ] FILE", errStream.toString().strip());
-        assertTrue("stdout output should be empty", outStream.toString().isEmpty());
+        assertTrue("stderr output should be empty", errStream.toString().isEmpty());
+        assertEquals("stdout output does not match", expected, outStream.toString());
         assertEquals("input file content not matched", input, getFileContent(inputFile.getPath()));
     }
     @Test
     public void texttoolTest37() throws Exception {
         String input = "thisisgood" + System.lineSeparator();
 
+
         File inputFile = createInputFile(input);
-        String[] args = {"-p", "-i", inputFile.getPath()};
+        String[] args = {"-p", "hello", "-c", "1", inputFile.getPath()};
         Main.main(args);
 
         assertEquals("stderr output does not match", "Usage: texttool [ -f | -o output_file_name | -i | -r old new | -p prefix | -c n | -d n ] FILE", errStream.toString().strip());
@@ -693,11 +696,11 @@ public class MyMainTest {
     public void texttoolTest45() throws Exception {
         String input = "alphanumeric123foobar" + System.lineSeparator();
 
-        String expected = "2grvngtaskxoi123luuhgx" + System.lineSeparator() +
-                "2grvngtaskxoi123luuhgx";
+        String expected = "!!!grvngtaskxoi123luuhgx" + System.lineSeparator() +
+                "!!!grvngtaskxoi123luuhgx";
 
         File inputFile = createInputFile(input);
-        String[] args = {"-c", "-20", "-p", "2", "-d", "1", inputFile.getPath()};
+        String[] args = {"-c", "-20", "-p", "!!!", "-d", "1", inputFile.getPath()};
         Main.main(args);
 
         assertTrue("stderr output should be empty", errStream.toString().isEmpty());
