@@ -580,7 +580,7 @@ public class MyMainTest {
     public void texttoolTest36() throws Exception {
         String input = "thisisgood" + System.lineSeparator();
 
-        String expected = "hellouijtjthppe" + System.lineSeparator();
+        String expected = "ifmmpuijtjthppe" + System.lineSeparator();
         File inputFile = createInputFile(input);
         String[] args = {"-c", "1", "-p", "hello", inputFile.getPath()};
         Main.main(args);
@@ -595,7 +595,7 @@ public class MyMainTest {
 
 
         File inputFile = createInputFile(input);
-        String[] args = {"-p", "hello", "-c", "1", inputFile.getPath()};
+        String[] args = {"-c", "-f", "hello", inputFile.getPath()};
         Main.main(args);
 
         assertEquals("stderr output does not match", "Usage: texttool [ -f | -o output_file_name | -i | -r old new | -p prefix | -c n | -d n ] FILE", errStream.toString().strip());
@@ -700,7 +700,7 @@ public class MyMainTest {
                 "!!!grvngtaskxoi123luuhgx";
 
         File inputFile = createInputFile(input);
-        String[] args = {"-c", "-20", "-p", "!!!", "-d", "1", inputFile.getPath()};
+        String[] args = {"-c", "-20", "-d", "1", "-p", "!!!", inputFile.getPath()};
         Main.main(args);
 
         assertTrue("stderr output should be empty", errStream.toString().isEmpty());
