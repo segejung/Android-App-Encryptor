@@ -700,11 +700,11 @@ public class MyMainTest {
     public void texttoolTest45() throws Exception {
         String input = "alphanumeric123foobar" + System.lineSeparator();
 
-        String expected = "1grvngtaskxoi123luuhgx" + System.lineSeparator() +
-                "1grvngtaskxoi123luuhgx";
+        String expected = "grvngtaskxoi123luuhgx" + System.lineSeparator() +
+                "grvngtaskxoi123luuhgx";
 
         File inputFile = createInputFile(input);
-        String[] args = {"-c", "-20", "-p", "1", inputFile.getPath()};
+        String[] args = {"-c", "-20", inputFile.getPath()};
         Main.main(args);
 
         assertTrue("stderr output should be empty", errStream.toString().isEmpty());
