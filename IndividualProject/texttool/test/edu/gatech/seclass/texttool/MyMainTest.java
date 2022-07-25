@@ -700,8 +700,7 @@ public class MyMainTest {
     public void texttoolTest45() throws Exception {
         String input = "alphanumeric123foobar" + System.lineSeparator();
 
-        String expected = "grvngtaskxoi123luuhgx" + System.lineSeparator() +
-                "grvngtaskxoi123luuhgx";
+        String expected = "grvngtaskxoi123luuhgx" + System.lineSeparator();
 
         File inputFile = createInputFile(input);
         String[] args = {"-c", "-20", inputFile.getPath()};
