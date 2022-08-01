@@ -71,13 +71,6 @@ public class Main {
 					result = empty_opt(fcontent);
 				}
 
-				//While file exists, perform other cases.
-				while (i < args.length - 1 && file_exist)
-				{
-					arg = args[i].trim();
-
-
-				}
 
 
 				//option 6. invalid opts
@@ -304,9 +297,7 @@ public class Main {
 	private static void usage() {
 		System.err.println("Usage: texttool [ -f | -o output_file_name | -i | -r old new | -p prefix | -c n | -d n ] FILE");
 	}
-
-
-	//"Usage: encode [-d string] [-w] [-x char] [-r string | -k string] [-c] FILE"
+	
 	private static void file_not_found()
 	{
 		System.err.println("File Not Found");
