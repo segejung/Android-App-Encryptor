@@ -98,12 +98,26 @@ public class Main {
 						}
 					}
 					//option 2. -w
-					else if(arg.equals("-w"))
+					else if(arg.equals("-f"))
 					{
 						if (result.length() == 0)
 							result = w_opt(fcontent, d_delimiter);
 						else
 							result = w_opt(result, d_delimiter);
+					}
+					else if(arg.equals("-o"))
+					{
+						if (result.length() == 0)
+							result = w_opt(fcontent, d_delimiter);
+						else
+							result = w_opt(result, d_delimiter);
+					}
+					else if(arg.equals("-i"))
+					{
+						if (result.length() == 0)
+							result = c_opt(fcontent);
+						else
+							result = c_opt(result);
 					}
 
 					//option 3. same for checking for r OPT
@@ -127,7 +141,7 @@ public class Main {
 						}
 					}
 					//option 4. same for checking for k OPT
-					else if(arg.equals("-k"))
+					else if(arg.equals("-p"))
 					{
 						//r needs to have string after -k
 						if( (i+1) != (args.length-1) && !args[i+1].startsWith("-"))
@@ -146,9 +160,9 @@ public class Main {
 							usage();
 						}
 					}
-		
 
-					else if (arg.equals("-x")) {
+
+					else if (arg.equals("-c")) {
 						if ((i + 1) != (args.length - 1) && !args[i + 1].startsWith("-")) {
 							x_delimiter = args[i + 1];
 							if (result.length() == 0)
@@ -163,14 +177,22 @@ public class Main {
 							usage();
 						}
 					}
-					//option 5. c opt.
-					else if(arg.equals("-c"))
-					{
-						if (result.length() == 0)
-							result = c_opt(fcontent);
-						else
-							result = c_opt(result);
+					else if (arg.equals("-d")) {
+						if ((i + 1) != (args.length - 1) && !args[i + 1].startsWith("-")) {
+							x_delimiter = args[i + 1];
+							if (result.length() == 0)
+								result = x_opt(fcontent,x_delimiter,d_delimiter);
+							else
+								result = x_opt(result,x_delimiter,d_delimiter);
+
+							i++;
+						} else {
+							if (result.length() == 0)
+								result = fcontent;
+							usage();
+						}
 					}
+					
 					else
 					{
 						valid_opt = false;
