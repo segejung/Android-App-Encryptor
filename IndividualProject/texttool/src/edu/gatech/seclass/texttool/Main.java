@@ -78,7 +78,7 @@ public class Main {
 
 
 
-					if(arg.equals("-d"))
+					if(arg.equals("-f"))
 					{
 						//d needs to have string after -d
 						if( (i+1) != (args.length-1) && !args[i+1].startsWith("-"))
@@ -98,7 +98,7 @@ public class Main {
 						}
 					}
 					//option 2. -w
-					else if(arg.equals("-w"))
+					else if(arg.equals("-o"))
 					{
 						if (result.length() == 0)
 							result = w_opt(fcontent, d_delimiter);
@@ -127,7 +127,7 @@ public class Main {
 						}
 					}
 					//option 4. same for checking for k OPT
-					else if(arg.equals("-k"))
+					else if(arg.equals("-p"))
 					{
 						//r needs to have string after -k
 						if( (i+1) != (args.length-1) && !args[i+1].startsWith("-"))
@@ -146,11 +146,14 @@ public class Main {
 							usage();
 						}
 					}
-					else if(arg.equals("-r") || arg.equals("-k")) {
+					else if(arg.equals("-r") || arg.equals("-c")) {
+						usage();
+					}
+					else if(arg.equals("-f") || arg.equals("-o")) {
 						usage();
 					}
 
-					else if (arg.equals("-x")) {
+					else if (arg.equals("-d")) {
 						if ((i + 1) != (args.length - 1) && !args[i + 1].startsWith("-")) {
 							x_delimiter = args[i + 1];
 							if (result.length() == 0)
@@ -167,6 +170,13 @@ public class Main {
 					}
 					//option 5. c opt.
 					else if(arg.equals("-c"))
+					{
+						if (result.length() == 0)
+							result = c_opt(fcontent);
+						else
+							result = c_opt(result);
+					}
+					else if(arg.equals("-i"))
 					{
 						if (result.length() == 0)
 							result = c_opt(fcontent);
@@ -357,15 +367,15 @@ public class Main {
 	//-x: if specified, the capitalize utility will flip the capitalization of all letters in the file,
 	// after applying any other transformation.
 
-	public static String x_opt(String fcontent, String x_delimiter, String d_delimiter) {
+	public static String x_opt(String fcontent, String r_delimiter, String d_delimiter) {
 
 
 		String delimiter = "\\s";
 
 		if (d_delimiter != "") {
-			return fcontent.replaceAll(d_delimiter, x_delimiter);
+			return fcontent.replaceAll(d_delimiter, r_delimiter);
 		} else {
-			return fcontent.replaceAll(delimiter, x_delimiter);
+			return fcontent.replaceAll(delimiter, r_delimiter);
 		}
 
 
@@ -409,7 +419,7 @@ public class Main {
 	}
 
 
-	//"Usage: encode [-d string] [-w] [-x char] [-r string | -k string] [-c] <filename>"
+	//"Usage: encode [-d string] [-w] [-x char] [-r string | -k string] [-c] FILE"
 	private static void file_not_found()
 	{
 		System.err.println("File Not Found");
