@@ -21,8 +21,8 @@ public class Main {
 		String result = "";
 		String fcontent = "";
 		String r_delimiter = "";
-		String k_delimiter = "";
-		String d_delimiter = "";
+		String p_delimiter = "";
+		String f_delimiter = "";
 		String x_delimiter = "";
 		Boolean writefile = true;
 		int i = 0;
@@ -83,11 +83,11 @@ public class Main {
 						//d needs to have string after -d
 						if( (i+1) != (args.length-1) && !args[i+1].startsWith("-"))
 						{
-							d_delimiter = args[i+1];
+							f_delimiter = args[i+1];
 							if (result.length() == 0)
-								result = d_opt(fcontent,d_delimiter);
+								result = f_opt(fcontent,f_delimiter);
 							else
-								result = d_opt(result,d_delimiter);
+								result = f_opt(result,f_delimiter);
 							i++;
 						}
 						else
@@ -101,9 +101,9 @@ public class Main {
 					else if(arg.equals("-o"))
 					{
 						if (result.length() == 0)
-							result = w_opt(fcontent, d_delimiter);
+							result = o_opt(fcontent, f_delimiter);
 						else
-							result = w_opt(result, d_delimiter);
+							result = o_opt(result, f_delimiter);
 					}
 
 					//option 3. same for checking for r OPT
@@ -114,9 +114,9 @@ public class Main {
 						{
 							r_delimiter = args[i+1];
 							if (result.length() == 0)
-								result = r_opt(fcontent,r_delimiter,d_delimiter);
+								result = r_opt(fcontent,r_delimiter,f_delimiter);
 							else
-								result = r_opt(result,r_delimiter,d_delimiter);
+								result = r_opt(result,r_delimiter,f_delimiter);
 							i++;
 						}
 						else
@@ -132,11 +132,11 @@ public class Main {
 						//r needs to have string after -k
 						if( (i+1) != (args.length-1) && !args[i+1].startsWith("-"))
 						{
-							k_delimiter = args[i+1];
+							p_delimiter = args[i+1];
 							if (result.length() == 0)
-								result = k_opt(fcontent,k_delimiter,d_delimiter,x_delimiter);
+								result = p_opt(fcontent,p_delimiter,f_delimiter,x_delimiter);
 							else
-								result = k_opt(result,k_delimiter,d_delimiter,x_delimiter);
+								result = p_opt(result,p_delimiter,f_delimiter,x_delimiter);
 							i++;
 						}
 						else
@@ -157,9 +157,9 @@ public class Main {
 						if ((i + 1) != (args.length - 1) && !args[i + 1].startsWith("-")) {
 							x_delimiter = args[i + 1];
 							if (result.length() == 0)
-								result = x_opt(fcontent,x_delimiter,d_delimiter);
+								result = x_opt(fcontent,x_delimiter,f_delimiter);
 							else
-								result = x_opt(result,x_delimiter,d_delimiter);
+								result = x_opt(result,x_delimiter,f_delimiter);
 
 							i++;
 						} else {
@@ -245,13 +245,13 @@ public class Main {
 	}
 
 	//If d_opt,
-	private static String d_opt(String fcontent, String d_delimiter) {
+	private static String f_opt(String fcontent, String d_delimiter) {
 		//need to have a delimiter. Doesn't do anything.
 		return fcontent;
 	}
 	//encode -w
 	// Reverses characters in each word.
-	private static String w_opt(String fcontent, String d_delimiter) {
+	private static String o_opt(String fcontent, String d_delimiter) {
 		String delimiter = "\\s";
 
 		if (d_delimiter != "") {
@@ -317,7 +317,7 @@ public class Main {
 	}
 
 	//If k_opt, keep the character from the string. Non alphabetic characters are unaffected.
-	private static String k_opt(String fcontent, String k_delimiter, String d_delimiter, String x_delimiter) {
+	private static String p_opt(String fcontent, String p_delimiter, String d_delimiter, String x_delimiter) {
 		String delimiter = " ";
 		if (d_delimiter != "") {
 			if (x_delimiter != "") {
@@ -325,7 +325,7 @@ public class Main {
 				for (int i = 0; i < fcontent.length(); i++) {
 					String character = String.valueOf(fcontent.charAt(i));
 
-					if (!character.matches("^[a-zA-Z0-9]*$") || character.matches(x_delimiter) || k_delimiter.contains(character.toUpperCase()) || k_delimiter.contains(character.toLowerCase()))
+					if (!character.matches("^[a-zA-Z0-9]*$") || character.matches(x_delimiter) || p_delimiter.contains(character.toUpperCase()) || p_delimiter.contains(character.toLowerCase()))
 						result = result.concat(character);
 				}
 				return result;
@@ -334,7 +334,7 @@ public class Main {
 				for (int i = 0; i < fcontent.length(); i++) {
 					String character = String.valueOf(fcontent.charAt(i));
 
-					if (!character.matches("^[a-zA-Z0-9]*$") || character.matches(d_delimiter) || k_delimiter.contains(character.toUpperCase()) || k_delimiter.contains(character.toLowerCase()))
+					if (!character.matches("^[a-zA-Z0-9]*$") || character.matches(d_delimiter) || p_delimiter.contains(character.toUpperCase()) || p_delimiter.contains(character.toLowerCase()))
 						result = result.concat(character);
 				}
 				return result;
@@ -346,7 +346,7 @@ public class Main {
 				for (int i = 0; i < fcontent.length(); i++) {
 					String character = String.valueOf(fcontent.charAt(i));
 
-					if (!character.matches("^[a-zA-Z0-9]*$") || character.matches(x_delimiter) || k_delimiter.contains(character.toUpperCase()) || k_delimiter.contains(character.toLowerCase()))
+					if (!character.matches("^[a-zA-Z0-9]*$") || character.matches(x_delimiter) || p_delimiter.contains(character.toUpperCase()) || p_delimiter.contains(character.toLowerCase()))
 						result = result.concat(character);
 				}
 				return result;
@@ -355,7 +355,7 @@ public class Main {
 				for (int i = 0; i < fcontent.length(); i++) {
 					String character = String.valueOf(fcontent.charAt(i));
 
-					if (!character.matches("^[a-zA-Z0-9]*$") || character.matches(delimiter) || k_delimiter.contains(character.toUpperCase()) || k_delimiter.contains(character.toLowerCase()))
+					if (!character.matches("^[a-zA-Z0-9]*$") || character.matches(delimiter) || p_delimiter.contains(character.toUpperCase()) || p_delimiter.contains(character.toLowerCase()))
 						result = result.concat(character);
 				}
 				return result;
