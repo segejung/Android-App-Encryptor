@@ -146,15 +146,7 @@ public class Main {
 							usage();
 						}
 					}
-					else if(arg.equals("-f") || arg.equals("-o")) {
-						usage();
-					}
-					else if(arg.equals("-r") || arg.equals("-c")) {
-						usage();
-					}
-					else if(arg.equals("-i")) {
-						usage();
-					}
+		
 
 					else if (arg.equals("-x")) {
 						if ((i + 1) != (args.length - 1) && !args[i + 1].startsWith("-")) {
